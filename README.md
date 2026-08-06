@@ -39,3 +39,29 @@ Whether generating applicant dockets, pre-filling multi-page visa forms, or comp
 ---
 
 ## ⚙️ Architecture & Data Flow
+[ Applicant / Browser ]
+│
+▼  (Submit Data)
+[ ASP.NET MVC Controller ] ──(Data Model Validation)
+│
+▼  (Serialize to JSON Payload)
+[ Adobe PDF Services Connector ]
+│
+▼  (REST API / SDK Call)
+[ Adobe Cloud Rendering Engine ]
+│
+▼  (Return Flattened / Formatted PDF)
+[ User Download / File Storage ]
+## 🚀 Quick Start & Installation
+
+### Prerequisites
+1. **.NET SDK** (v7.0 or higher) installed locally.
+2. **Visual Studio 2022** or **VS Code**.
+3. **Adobe PDF Services Credentials** (`pdfservices-api-credentials.json` or Client ID / Secret key pair from the [Adobe Developer Console](https://developer.adobe.com/console)).
+
+### Setup Instructions
+
+1. **Clone the Repository:**
+   ```bash
+   git clone [https://github.com/fzn2183/VisaPro-APP.git](https://github.com/fzn2183/VisaPro-APP.git)
+   cd VisaPro-APP
